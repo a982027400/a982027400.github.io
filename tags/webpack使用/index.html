@@ -6,12 +6,12 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Superman的博客</title>
+  <title>Tag: webpack使用 | Superman的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="这是一个利用Hexo搭建的博客">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Superman的博客">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:url" content="http://yoursite.com/tags/webpack使用/index.html">
 <meta property="og:site_name" content="Superman的博客">
 <meta property="og:description" content="这是一个利用Hexo搭建的博客">
 <meta name="twitter:card" content="summary">
@@ -166,387 +166,34 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-Vue学习" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
+  
     
-      <header class="article-header">
-        
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2017" class="archive-year">2017</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2017/04/12/Vue学习/" class="archive-article-date">
+  	<time datetime="2017-04-12T13:15:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-12</time>
+</a>
+        </div>
+    	 
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/04/12/Vue学习/">Vue学习</a>
+      <a class="archive-article-title" href="/2017/04/12/Vue学习/">Vue学习</a>
     </h1>
   
 
-        
-        <a href="/2017/04/12/Vue学习/" class="archive-article-date">
-  	<time datetime="2017-04-12T13:15:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-12</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="5天课程"><a href="#5天课程" class="headerlink" title="5天课程"></a>5天课程</h4><ul>
-<li>1：webpack基本知识,前端模块构建工具 vue结合，通过webpck来构建一个vue的应用<ul>
-<li>vue两种方式构建，独立构建方式，引包，一个一个js再引入</li>
-<li>通过webpack运行时构建，单文件的方式</li>
-</ul>
-</li>
-<li>2: vue基本知识，vue常用指令，组件的思想和运用，组件通信。。。遗留一点点小知识点，到项目中直接使用</li>
-<li>3-5:项目开发</li>
-</ul>
-<h4 id="今日重点"><a href="#今日重点" class="headerlink" title="今日重点"></a>今日重点</h4><ul>
-<li>webpack.config.js文件中相关属性的作用</li>
-</ul>
-<h3 id="webpack启程"><a href="#webpack启程" class="headerlink" title="webpack启程"></a>webpack启程</h3><hr>
-<h4 id="历史介绍"><a href="#历史介绍" class="headerlink" title="历史介绍"></a>历史介绍</h4><ul>
-<li>commonjs:使用js语法要求的后端语言的规范,模块化、后端语言需要具备的一些要求，可以http、操作文件。。。。<ul>
-<li>require/module.exports</li>
-<li>计算器案例： <ul>
-<li>+-*/ -&gt; cal.js</li>
-<li>index.js 作为页面中动态操作主文件，使用cal.js内部的功能</li>
-<li>index.html 引入顺序</li>
-<li>两大问题: 文件依赖顺序、全局函数命名冲突</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>2009年，commonjs规范还未出来，此时前端开发人员编写的代码都是非模块化的，<ul>
-<li>那个时候开发人员经常需要十分留意文件加载顺序所带来的依赖问题</li>
-</ul>
-</li>
-<li>与此同时 nodejs开启了js全栈大门，而requirejs在国外也带动着前端逐步实现模块化<ul>
-<li>同时国内seajs也进行了大力推广</li>
-<li>AMD 异步模块定义 requirejs</li>
-<li>CMD seajs和nodejs非常相似</li>
-</ul>
-</li>
-<li>AMD和CMD的区别<ul>
-<li>amd 加载前置，需要的依赖提前加载好，在代码上提前声明</li>
-<li>cmd 依赖滞后(延迟加载)，代码也是用的时候才引入<ul>
-<li>commonjs包含模块定义，和CMD比较相似</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>npm集中包管理的方式备受青睐，12年bower、browserify诞生<ul>
-<li>browserify 最大的功能是为了让require的语法能够在浏览器中运行</li>
-<li>并且有相关的一些插件可以结合使用 gulp、ES6语法转化</li>
-<li>此时爆发大量前端工具 webpack也在其中，其是一款模块打包工具<ul>
-<li>压缩、合并、混淆 + 结合插件的代码转化 ，自动化一气呵成<br>、systemjs：万能模块打包工具、跟angular抱大腿，angular4用了</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h4 id="webpack优点"><a href="#webpack优点" class="headerlink" title="webpack优点"></a>webpack优点</h4><ul>
-<li>模块来源广泛，支持包括npm/bower等等的各种主流模块安装／依赖解决方案</li>
-<li>模块规范支持全面，amd/cmd以及shimming等一应具全</li>
-<li>浏览器端足迹小，移动端友好，却对热加载乃至热替换有很好的支持</li>
-<li>插件机制完善，实现同样模块化，容易扩展</li>
-</ul>
-<h4 id="webpack基本操作"><a href="#webpack基本操作" class="headerlink" title="webpack基本操作"></a>webpack基本操作</h4><ul>
-<li>npm进行安装 <ul>
-<li>全局安装方式 <code>npm install(i) webpack -g</code></li>
-<li>1:进入到webpack需要进行分析打包的文件夹目录下<ul>
-<li>命令 <code>webpack 入口文件 出口文件</code><ul>
-<li>在index.html文件中，直接引入出口文件</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h4 id="使用webpack打包解决文件依赖关系"><a href="#使用webpack打包解决文件依赖关系" class="headerlink" title="使用webpack打包解决文件依赖关系"></a>使用webpack打包解决文件依赖关系</h4><ul>
-<li>基本操作方式: <pre><code>+ `webpack ./main.js ./build.js` -p(压缩混淆)
-</code></pre></li>
-</ul>
-<h4 id="使用webpack配置文件"><a href="#使用webpack配置文件" class="headerlink" title="使用webpack配置文件"></a>使用webpack配置文件</h4><ul>
-<li>webpack在命令行输入webpack命令的时候，首先会在当前的目录查看有没有webpack.config.js文件的存在，如果有，即读取该文件，按该文件的指令来做打包操作<ul>
-<li>如果没有，才走命令</li>
-</ul>
-</li>
-</ul>
-<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><ul>
-<li>webpack可以运行的两种方式 cli option (命令行及设置)</li>
-<li>通过webpack.config.js文件运行 <ul>
-<li>所有的配置属性都在module.exports = {内部配置} </li>
-</ul>
-</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">module</span>.exports = &#123;</div><div class="line">   <span class="comment">//指定入口文件</span></div><div class="line">   entry :&#123;</div><div class="line">       <span class="comment">//这里可以有多个入口</span></div><div class="line">       main:<span class="string">'./main.js'</span>, <span class="comment">//主入口</span></div><div class="line">   &#125;,</div><div class="line">   <span class="attr">output</span>:&#123; <span class="comment">//出口</span></div><div class="line">       filename:<span class="string">'./build.js'</span></div><div class="line">   &#125;</div><div class="line">&#125;</div><div class="line"><span class="comment">//最终我们到当前有webpack.config.js文件的目录来执行 webpack命令就可以了</span></div></pre></td></tr></table></figure>
-<h3 id="es6"><a href="#es6" class="headerlink" title="es6"></a>es6</h3><hr>
-<h4 id="babel语法转换器"><a href="#babel语法转换器" class="headerlink" title="babel语法转换器"></a>babel语法转换器</h4><ul>
-<li>js代码转换工具<ul>
-<li>ES6、ES7..react 语法的转换工具<ul>
-<li>他本身自带转换cli ，你可以通过<code>npm install babel-cli -g</code> 的全局命令行工具，来完成单独的转化</li>
-<li>他也提供了别的工具使用的支持<ul>
-<li>比如browserify babelify</li>
-<li>比如 webpack babel-core ……</li>
-</ul>
-</li>
-<li>烦心: babel默认只提供了es6关键字的转换 let const</li>
-<li>如果涉及到es6或者es7函数，就需要特定的设置插件</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>1:安装babel核心工具包<ul>
-<li><code>babel-core</code></li>
-</ul>
-</li>
-<li>2:配置babel的预设? babel是一个语法转换器，包含es6/7/react，就是告诉babel要将什么转换成什么，告诉其转化ES6到ES5，预先设置<ul>
-<li><code>babel-preset-es2015</code></li>
-</ul>
-</li>
-<li>3:babel不转换函数API,配置插件,<code>babel-plugin-transform-runtime</code></li>
-<li>4: webpack需要一个<code>babel-loader</code></li>
-</ul>
-<h4 id="webpack-ES6的处理总结"><a href="#webpack-ES6的处理总结" class="headerlink" title="webpack-ES6的处理总结"></a>webpack-ES6的处理总结</h4><ul>
-<li><strong>在babel-loader的处理中，一定加上exclude: /node_modules/，排除node_modules部分</strong></li>
-<li>babel是什么？ 语法转换器<ul>
-<li>babel可以转化ES6、ES7、react</li>
-<li>默认只转换ES6、关键字<ul>
-<li>提供预设转换ES6关键字 下载 <code>npm i babel-preset-es2015 --save-dev</code></li>
-<li>在webpack中配置的方式: <code>presets:[&#39;es2015&#39;]</code></li>
-</ul>
-</li>
-<li>不转换函数 <ul>
-<li>提供插件<ul>
-<li>安装: <code>npm i babel-plugin-transform-runtime --save-dev</code></li>
-<li>在webpack中配置的方式: <code>plugins:[&#39;transform-runtime&#39;]</code></li>
-</ul>
-</li>
-</ul>
-</li>
-<li>还需要核心包 <code>babel-core</code> 只需要安装就可以了 <code>npm i babel-core --save-dev</code></li>
-</ul>
-</li>
-<li><p>webpack要与babel结合就需要babel-loader</p>
-<ul>
-<li><code>npm i babel-loader --save-dev</code></li>
-</ul>
-</li>
-<li><p>配置方式</p>
-</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">module</span>.exports = &#123;</div><div class="line">    <span class="comment">//入口</span></div><div class="line">    entry:&#123;</div><div class="line">        <span class="attr">main</span>:<span class="string">'./main.js'</span>,</div><div class="line">    &#125;,</div><div class="line">    <span class="attr">output</span>:&#123;<span class="comment">//输出</span></div><div class="line">        filename:<span class="string">'./build.js'</span>,</div><div class="line">    &#125;,</div><div class="line">    <span class="attr">module</span>:&#123;</div><div class="line">        <span class="attr">loaders</span>:[</div><div class="line">            &#123;</div><div class="line">                <span class="attr">test</span>:<span class="regexp">/.js$/</span>,<span class="comment">//正则表达式，指定以.js后缀结尾的文件由我这个loader来处理</span></div><div class="line">                loader:<span class="string">'babel-loader'</span>,</div><div class="line">                <span class="attr">options</span>:&#123;</div><div class="line">                    <span class="attr">presets</span>:[<span class="string">'es2015'</span>],</div><div class="line">                    <span class="attr">plugins</span>:[<span class="string">'transform-runtime'</span>],</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        ]</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h4 id="引入css"><a href="#引入css" class="headerlink" title="引入css"></a>引入css</h4><ul>
-<li>原理：通过js代码动态创建css对象，再通过style标签，做动态插入</li>
-<li>具体操作:<ul>
-<li>原来我们有es6的解析，此时，暂时把其移除了，</li>
-<li>留下的是通过require的方式引入css,<ul>
-<li>import ‘./index.css’ 也是一样的操作</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>配置方式</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="built_in">module</span>.exports = &#123;</div><div class="line">    <span class="comment">//入口+ 出口</span></div><div class="line">    <span class="built_in">module</span>:&#123;</div><div class="line">        <span class="attr">loaders</span>:[</div><div class="line">            &#123;</div><div class="line">                <span class="attr">test</span>:<span class="regexp">/.css$/</span>,<span class="comment">//需要操作的文件-&gt;正则</span></div><div class="line">                loader:<span class="string">'style-loader!css-loader'</span></div><div class="line">            &#125;</div><div class="line">        ]</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<ul>
-<li>如何在main.js中使用某个css?<ul>
-<li>不使用es6的方式，<code>require(&#39;./index.css&#39;);</code></li>
-<li>使用ES6导入的方式 <code>import &#39;./index.css&#39;;</code></li>
-</ul>
-</li>
-</ul>
-<h4 id="css-autoprefixer"><a href="#css-autoprefixer" class="headerlink" title="css + autoprefixer"></a>css + autoprefixer</h4><ul>
-<li>1:安装包<code>npm i autoprefixer-loader -D</code></li>
-<li>2: 在配置文件中加入 loaders内部加入一个对象:{ test: /.css$/,loader:’style-loader!css-loader!autoprefixer-loader’ }</li>
-</ul>
-<h4 id="less的使用"><a href="#less的使用" class="headerlink" title="less的使用"></a>less的使用</h4><ul>
-<li>和css前面的操作都一样<ul>
-<li>提前编译less需要 less-loader 和less这两个包</li>
-<li>安装依赖包 <code>npm i less-loader less -D</code></li>
-</ul>
-</li>
-<li>配置文件的写法</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">module</span>.exports = &#123;</div><div class="line"></div><div class="line">    <span class="attr">module</span>:&#123;</div><div class="line">        <span class="attr">loaders</span>:[</div><div class="line">            &#123;</div><div class="line">                <span class="attr">test</span>:<span class="regexp">/.less$/</span>,</div><div class="line">                <span class="attr">loader</span>:<span class="string">'style-loader!css-loader!autoprefixer-loader!less-loader'</span></div><div class="line">            &#125;</div><div class="line">        ]</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<ul>
-<li>由于less-loader依赖于less 所以需要先下载less，再下载less-loader</li>
-</ul>
-<h4 id="处理图片"><a href="#处理图片" class="headerlink" title="处理图片"></a>处理图片</h4><ul>
-<li>需要先下载：</li>
-<li><p>原理:会把依赖的图片生成一个url，通过该url去访问图片，由于需要读取图片，就需要操作文件,由此： 需要file-loader + url-loader   </p>
-<ul>
-<li>url-loader不用在webpack中写出来，只用安装即可</li>
-</ul>
-</li>
-<li><p>设置limit=1 的时候生成了一张图片，然后build.js大小是73kb</p>
-</li>
-<li>设置limit=199182 的时候，大图片了一个字节，就不生成图片</li>
-</ul>
-<h4 id="base64编码"><a href="#base64编码" class="headerlink" title="base64编码"></a>base64编码</h4><ul>
-<li>A-Za-Z0-9+/  共是64个</li>
-<li>他可以跟随css一起加载，减少请求次数到0</li>
-<li>不适合过大的图片，只能是小图片，频繁使用的小图片</li>
-<li>普遍用在邮件的发送中</li>
-<li>常规认为base64图片加密会增大个三分之一左右</li>
-<li><strong>注意：其不是绝对为了加密的产生，可以编码也可以解码，但是可以将二进制的数据作为字符串传输</strong></li>
-</ul>
-<h4 id="base64-在node中的编码解码"><a href="#base64-在node中的编码解码" class="headerlink" title="base64 在node中的编码解码"></a>base64 在node中的编码解码</h4><blockquote>
-<p>Buffer.from(‘javascript’).toString(‘base64’);<br>‘amF2YXNjcmlwdA==’<br>Buffer.from(‘amF2YXNjcmlwdA==’,’base64’).toString(‘utf8’);<br>‘javascript’</p>
-</blockquote>
-<h4 id="yarn的使用"><a href="#yarn的使用" class="headerlink" title="yarn的使用"></a>yarn的使用</h4><ul>
-<li>安装全局命令行工具 <code>npm i yarn -g</code></li>
-<li>安装对应的包<ul>
-<li>安装一个包 <code>yarn add 包名@版本号 -S|-D</code></li>
-<li>卸载一个包 <code>yarn remove 包名@ -S|-D</code></li>
-<li>恢复所有package.json文件中依赖的包 <code>npm install [--production]</code><ul>
-<li>只恢复生产依赖的包，既-S的包</li>
-</ul>
-</li>
-<li>yarn中恢复包的命令就是 <code>yarn install [--production]</code></li>
-<li>更新到最新 <code>yarn update 包名</code></li>
-</ul>
-</li>
-</ul>
-<h4 id="总结上午问题"><a href="#总结上午问题" class="headerlink" title="总结上午问题"></a>总结上午问题</h4><ul>
-<li>ES6报错</li>
-<li>commonJS 模块化和 ES6模块化方式区别<ul>
-<li>commonJS模块化中的使用方式<ul>
-<li>导入: var xxx = require(‘模块路径ID’);</li>
-<li>导出: module.exports = xxxx;</li>
-</ul>
-</li>
-<li>导入: <ul>
-<li>导入文件不需要返回值:<ul>
-<li>import ‘./文件路径’;</li>
-</ul>
-</li>
-<li>导入需要返回值:<ul>
-<li>import 变量名 from ‘./文件路径.js’;</li>
-</ul>
-</li>
-<li>导出:<ul>
-<li>export default xxx;</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h4 id="处理字体图片"><a href="#处理字体图片" class="headerlink" title="处理字体图片"></a>处理字体图片</h4><ul>
-<li>比较流行的一种方案<ul>
-<li>相比图片，大小更小</li>
-<li>更灵活,可以通过font-size。。。设置其大小</li>
-</ul>
-</li>
-<li>也会使用到字体图标</li>
-</ul>
-<h4 id="MUI"><a href="#MUI" class="headerlink" title="MUI"></a>MUI</h4><ul>
-<li><a href="http://dev.dcloud.net.cn/mui/" target="_blank" rel="external">http://dev.dcloud.net.cn/mui/</a></li>
-</ul>
-<h4 id="生成html文件插件"><a href="#生成html文件插件" class="headerlink" title="生成html文件插件"></a>生成html文件插件</h4><ul>
-<li>webpack-html-plugin</li>
-<li><p>安装这个插件,这个插件依赖于webpack</p>
-<ul>
-<li>webpack -&gt; 在任意命令行使用webpack命令</li>
-<li>如果在js文件中，存在webpack对象的话，是不是必须让其作为项目的依赖</li>
-<li><strong>该插件依赖于webpack</strong></li>
-</ul>
-</li>
-<li><p>操作步骤:</p>
-<ul>
-<li>1：安装webpack和webpack-html-plugin插件<ul>
-<li>在webpack.config.js文件中进行配置</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">三大属性:entry、output、<span class="built_in">module</span></div><div class="line"><span class="keyword">const</span> webpackHtmlPlugin = <span class="built_in">require</span>(<span class="string">'webpack-html-plugin'</span>);</div><div class="line">plugins:[</div><div class="line">    <span class="keyword">new</span> webpackHtmlPlugin(&#123;</div><div class="line">        <span class="attr">filename</span>:<span class="string">'index.html'</span>,<span class="comment">//生成的文件名</span></div><div class="line">        template:<span class="string">'./src/html/index.html'</span>,<span class="comment">//参照的文件名</span></div><div class="line">        &#125;)</div><div class="line">]</div></pre></td></tr></table></figure>
-<ul>
-<li>注意，09案例中，我们把相对路径都进行了更改，此时有些entry和output我们需要做一个改动，最好检查template:’./src/html/index.html’</li>
-</ul>
-<h4 id="webpack-dev-server"><a href="#webpack-dev-server" class="headerlink" title="webpack-dev-server"></a>webpack-dev-server</h4><ul>
-<li>这个工具包含前面提到热加载，热替换功能，<ul>
-<li>修改css或者一些加载过程中的代码，立刻不通过刷新，直接改变</li>
-<li><strong>只要是你上级包含非法符号，就会导致热替换不成功、无法监视你的文件改动，获取不了目录、{}()</strong>  </li>
-</ul>
-</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">module</span>.exports = &#123;</div><div class="line">     <span class="attr">module</span>:&#123;&#125;,</div><div class="line">     <span class="attr">plugins</span>:[</div><div class="line">        <span class="keyword">new</span> webpackHtmlPlugin(&#123;</div><div class="line">            <span class="attr">filename</span>:<span class="string">'index.html'</span>, <span class="comment">//虚拟的html文件，供webpack-dev-server使用</span></div><div class="line">            template:<span class="string">'./src/html/index.html'</span></div><div class="line">            &#125;)</div><div class="line">    ]</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<ul>
-<li>启动命令 ,.在package.json文件的目录下<ul>
-<li>运行命令 yarn test<ul>
-<li>实际运行的是scripts: test命令<ul>
-<li>../node_modules/.bin/webpack-dev-server –inline –hot –open –port 9999</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>相关命令：<ul>
-<li>inline 自动刷新</li>
-<li>hot 热加载、热替换(不经过刷新，不重启程序)</li>
-<li>open 自动打开浏览器</li>
-<li>port 指定端口</li>
-</ul>
-</li>
-</ul>
-<h4 id="最终效果"><a href="#最终效果" class="headerlink" title="最终效果"></a>最终效果</h4><ul>
-<li>启动webpack命令 能在dist下面运行index.html</li>
-<li>在package.json文件的目录能运行yarn test 启动程序，修改代码实现热替换</li>
-</ul>
-<h4 id="ES6中的模块"><a href="#ES6中的模块" class="headerlink" title="ES6中的模块"></a>ES6中的模块</h4><ul>
-<li>import 对象 from ‘./xxx.js’;</li>
-<li>和按需加载 import {对象中的属性} from  ‘./xxx.js’;</li>
-<li><strong>注意:一个默认导出，是不区分名称的,按需加载必须区分名称</strong><ul>
-<li>按需加载 引入的时候 import { 接口名称} from ‘./xx.js’</li>
-<li>导出：  <ul>
-<li>1:声明式导出 export var add(接口名称) = function(){ }; //类似export {add}</li>
-<li>2: 在代码最终导出<ul>
-<li>export {接口名称||对象,多个… }</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>按需的方式一定要名称对应</li>
-</ul>
-</li>
-</ul>
-<h4 id="ES6中的代码变化"><a href="#ES6中的代码变化" class="headerlink" title="ES6中的代码变化"></a>ES6中的代码变化</h4><ul>
-<li>函数的声明：<ul>
-<li>var obj = {  add:function(){ }  }</li>
-<li>简写: <code>var obj = {  add(){}            }</code></li>
-<li>声明对象：var name=’abc’; var obj = {name}  //obj的name属性的值就是abc</li>
-</ul>
-</li>
-</ul>
-<h3 id="VUE"><a href="#VUE" class="headerlink" title="VUE"></a>VUE</h3><hr>
-<h4 id="简单介绍"><a href="#简单介绍" class="headerlink" title="简单介绍"></a>简单介绍</h4><blockquote>
-<p>尤雨溪毕业于上海复旦附中，在美国完成大学学业，本科毕业于Colgate University，后在Parsons设计学院获得Design &amp; Technology艺术硕士学位，现任职于纽约Google Creative Lab。<br>2014年2月，开源了一个前端开发库Vue.js。Vue.js 是构建 Web 界面的 JavaScript 库，是一个通过简洁的API提供高效的数据绑定和灵活的组件系统。<br>2016年9月3日，在南京的JSConf上，Vue作者尤雨溪正式宣布加盟阿里巴巴Weex团队，尤雨溪称他将以技术顾问的身份加入 Weex 团队来做 Vue 和 Weex 的 JavaScript runtime 整合，目标是让大家能用 Vue 的语法跨三端</p>
-</blockquote>
-<h4 id="作为库的使用方式-渐进式、初体验-、独立构建"><a href="#作为库的使用方式-渐进式、初体验-、独立构建" class="headerlink" title="作为库的使用方式(渐进式、初体验)、独立构建"></a>作为库的使用方式(渐进式、初体验)、独立构建</h4><ul>
-<li>双向数据绑定<ul>
-<li>1:引入文件</li>
-<li>2: 通过全局的Vue对象构造了一个vue的实例</li>
-<li>3：传递一个对象作为参数<ul>
-<li>el 未来由vue来管理的元素</li>
-<li>data:{ text:’xxx’}  //这些属性可以在模板当中使用</li>
-<li>template: ‘<h1><h1>‘  设置了template就会覆盖原来的内容</h1></h1></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h4 id="单文件的使用方式-运行时构建"><a href="#单文件的使用方式-运行时构建" class="headerlink" title="单文件的使用方式(运行时构建)"></a>单文件的使用方式(运行时构建)</h4><ul>
-<li>以一个个的xxx.vue的文件形成<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></div><div class="line">    <span class="comment">&lt;!-- 放置html内容的地方，可以使用vue中的一些对象，进行双向数据交互 --&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line">    <span class="comment">//组件动态操作，数据初始化</span></div><div class="line">    <span class="comment">//存放一些js代码，可以操作当前模块页面组件对象的属性值及相关动态操作</span></div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">scoped</span>&gt;</span><span class="undefined"></span></div><div class="line">    /*给定一个scoped属性以后，这个css只在当前的template中有效*/</div><div class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div></pre></td></tr></table></figure></li>
-</ul>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -558,139 +205,19 @@
 		</ul>
 	</div>
 
-      
+          
 
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/04/12/Vue学习/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
+        </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-
-
-
-
-
-
-
   
-    <article id="post-第一篇博客" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
+  
+    </div></section>
+  
+
     
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/04/10/第一篇博客/">第一篇博客</a>
-    </h1>
-  
-
-        
-        <a href="/2017/04/10/第一篇博客/" class="archive-article-date">
-  	<time datetime="2017-04-10T06:26:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-10</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>这是我的第一篇博客，做测试使用。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/04/10/第一篇博客/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/04/09/hello-world/">Hello World</a>
-    </h1>
-  
-
-        
-        <a href="/2017/04/09/hello-world/" class="archive-article-date">
-  	<time datetime="2017-04-09T15:18:20.233Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-09</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/04/09/hello-world/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-  
 
 
           </div>
@@ -712,10 +239,10 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
+		isHome: false,
 		isPost: false,
 		isArchive: false,
-		isTag: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: false,
 		root: "/",
